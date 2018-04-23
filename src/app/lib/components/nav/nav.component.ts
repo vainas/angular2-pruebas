@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'cf-nav',
   template: `
-    <p>
-      nav works!
-    </p>
+  <ul>
+    <li><a routerLink="/">Inicio</a></li>
+    <li><a routerLink="/operations">Operaciones</a></li>
+  </ul>
   `,
   styles: []
 })

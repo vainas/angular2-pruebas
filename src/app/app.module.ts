@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './lib/components/components.module';
 import { HomeModule } from './views/home/home.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +20,7 @@ import { HomeModule } from './views/home/home.module';
     HomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }
