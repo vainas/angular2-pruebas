@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 import { ComponentsModule } from './lib/components/components.module';
 import { HomeModule } from './views/home/home.module';
+import { HttpClientModule } from '@angular/common/http';
+
+import { NotFoundModule } from './views/not-found/not-found.module';
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { HomeModule } from './views/home/home.module';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    HomeModule
+    HomeModule,
+    HttpClientModule,
+    NotFoundModule
   ],
   providers: [],
   bootstrap: [AppComponent],
