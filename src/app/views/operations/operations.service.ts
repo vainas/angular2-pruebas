@@ -37,13 +37,13 @@ export class OperationsService {
     return this.http.get<Operation[]>(this.url);
   }
   public getOperationById$(id: string): Observable<Operation> {
-    return this.http.get<Operation>(this.url + id);
+    return this.http.get<Operation>(this.url + "/" + id);
   }
   public saveOperation$(operation: Operation): Observable<any> {
     return this.http.post(this.url, operation);
   }
   public deleteOperation$(operation: Operation): Observable<any> {
-    return this.http.delete(this.url + operation._id);
+    return this.http.delete(this.url + "/" + operation._id);
   }
   public getNumberOfOperations$(): Observable<any> {
     return this.http.get(this.url + "/count");
