@@ -12,6 +12,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NotFoundModule } from './views/not-found/not-found.module';
 import { RequestInterceptorService } from './lib/request-interceptor.service';
 
+import  { StoreService } from './lib/store.service';
+
+import { TokenInterceptorService } from "./lib/token-interceptor.service";
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,13 @@ import { RequestInterceptorService } from './lib/request-interceptor.service';
     provide: HTTP_INTERCEPTORS,
     useClass: RequestInterceptorService,
     multi: true
-  }],
+  },
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  },
+StoreService],
   bootstrap: [AppComponent],
   exports: []
 })

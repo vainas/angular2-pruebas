@@ -7,7 +7,7 @@ import { environment } from '../../../environments/environment';
 @Injectable()
 export class OperationsService {
   private operations: Operation[] = [];
-  private url = environment.apiUrl + "pub/items";
+  private url = environment.apiUrl + "pub/priv/items";
   
   constructor(private http: HttpClient) { }
 
